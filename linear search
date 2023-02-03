@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+	int k,a,i,arr[10],output=0;
+	printf("enter the size of an array=");
+	scanf("%d",&a);
+	printf("enter the search element=");
+	scanf("%d",&k);
+	printf("enter the set numbers\n");
+	for(i=0;i<a;i++)
+	{
+	  scanf("%d",&arr[i]);
+	}
+	for(i=0;i<a;i++)
+	{
+		if(arr[i]==k)
+		{
+			printf("search element= %d index= %d",k,i);
+			output += 1;
+		}
+	}	
+	if(output == 0)
+	{
+		printf("No elemnt found");
+	}
+}
