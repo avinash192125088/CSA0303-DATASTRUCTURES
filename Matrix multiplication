@@ -1,0 +1,68 @@
+#include<stdio.h>
+int main()
+{
+	int n,m,i,j,k,a[3][3],b[3][3],c[3][3];
+	
+	printf("enter rows=");
+	scanf("%d",&n);
+	printf("enter columns=");
+	scanf("%d",&m);
+	printf("enter matrix A:\n");
+    for(i=0;i<n;i++)
+    {
+    	for(j=0;j<m;j++)
+    	{
+    		scanf("%d",&a[i][j]);
+		}
+		printf("\n");
+	}
+	printf("matrix B:\n");
+	for(i=0;i<n;i++)
+    {
+    	for(j=0;j<m;j++)
+    	{
+    		scanf("%d",&b[i][j]);
+		}
+		printf("\n");
+	}
+	printf("first matrix:\n");
+     for(i=0;i<n;i++)
+    {
+    	for(j=0;j<m;j++)
+    	{
+    		printf("%d\t",a[i][j]);
+		}
+		printf("\n");
+	}
+	printf("second matrix:\n");
+	for(i=0;i<n;i++)
+    {
+    	for(j=0;j<m;j++)
+    	{
+    		printf("%d\t",b[i][j]);
+		}
+		printf("\n");
+	}
+	for(i=0;i<n;i++)
+    {
+    	for(j=0;j<m;j++)
+    	{
+    		c[i][j]=0;
+    	    for(k=0;k<m;k++)
+    	    {
+    	    	c[i][j]+=a[i][k]*b[k][j];
+			}
+		}
+	}
+
+	printf("output is:\n");
+	for(i=0;i<n;i++)
+    {
+    	for(j=0;j<m;j++)
+    	{
+    		printf("%d\t",c[i][j]);
+		}
+		printf("\n");
+	}
+
+}
